@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SimpleLoginScreenCustomizer\n"
+"POT-Creation-Date: 2013-12-12 20:16-0500\n"
+"PO-Revision-Date: 2013-12-12 20:16-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../simple-login-screen-customizer-admin.php:41
+msgid "Simple Login Screen Customizer"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:42
+msgid "Login Screen"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:66
+msgid "Login Screen Settings"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:73
+msgid "Login Logo"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:81
+msgid "Login Logo Preview"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:89
+msgid "Login Link Color"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:97
+msgid "Login Rollover Color"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:105
+msgid "Login Button Color"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:122
+msgid ""
+"Choose a link color and logo for the login screen.  You can also choose "
+"rollover and button colors if you'd like.  Otherwise they will default to "
+"shades of the link color."
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:130
+msgid "Upload Logo"
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:131
+msgid " Upload or choose an image to be the logo on your login page."
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:165
+msgid " Defaults to a darker shade of the link color."
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:173
+msgid " Defaults to a button version of the link color.  Button text is white."
+msgstr ""
+
+#: ../simple-login-screen-customizer-admin.php:251
+msgid "I want this to be my logo!"
+msgstr ""
