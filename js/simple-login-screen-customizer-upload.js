@@ -1,14 +1,38 @@
 jQuery(document).ready(function($) {
-	$('#upload_logo_button').click(function() {
-		tb_show('Upload a logo', 'media-upload.php?referer=simpleloginscreencustomizer_plugin_options&type=image&TB_iframe=true&post_id=0', false);
-		return false;
-	});
 	
-	window.send_to_editor = function(html) {
-		var image_url = $('img',html).attr('src');
-		$('#logo_url').val(image_url);
-		tb_remove();
-		$('#upload_logo_preview img').attr('src',image_url);
-		$('#submit_options_form').trigger('click');
-	}
+	var custom_uploader;
+	
+	$('#upload_logo_button').click(function(e) {
+		e.preventDefault();
+ 
+		        //If the uploader object has already been created, reopen the dialog
+		        if (custom_uploader) {
+		            custom_uploader.open();
+		            return;
+		        }
+ 
+		        //Extend the wp.media object
+		        custom_uploader = wp.media.frames.file_frame = wp.media({
+		            title: 'Choose a Logo',
+		            button: {
+		                text: 'Choose Logo'
+		            },
+					library: { // remove these to show all
+                		type: 'image' // specific mime
+            		},
+					default_tab: 'upload', // Just added for example
+		            multiple: false
+		        });
+				
+				//When a file is selected, grab the URL and set it as the text field's value
+				custom_uploader.on('select', function() {
+				    attachment = custom_uploader.state().get('selection').first().toJSON();
+				    $('#logo_url').val(attachment.url);
+					$('#upload_logo_preview img').attr('src',attachment.url);
+					$('#submit_options_form').trigger('click');
+				});
+ 
+		        //Open the uploader dialog
+		        custom_uploader.open();
+	});
 });
