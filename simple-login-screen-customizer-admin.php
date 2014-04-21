@@ -127,7 +127,7 @@ function simpleloginscreencustomizer_logo_callback() {
 	$options = get_option('simpleloginscreencustomizer_plugin_display_options');
 	?>
 	<input type="hidden" id="logo_url" name="simpleloginscreencustomizer_plugin_display_options[logo]" value="<?php echo esc_url( $options['logo'] ); ?>" />
-	<input id="upload_logo_button" type="button" class="button" value="<?php _e('Upload Logo', 'simpleloginscreencustomizer'); ?>" />
+	<input id="upload_logo_button" type="button" class="button" value="<?php _e('Choose Logo', 'simpleloginscreencustomizer'); ?>" />
 	<span class="description"><?php _e(' Upload or choose an image to be the logo on your login page.', 'simpleloginscreencustomizer_plugin_display_options' ); ?></span>
 		<?php 
 }
@@ -226,6 +226,7 @@ function simpleloginscreencustomizer_enqueue_scripts() {
 		wp_enqueue_style('thickbox');
 		
 		wp_enqueue_script('media-upload');
+		wp_enqueue_media();
 		wp_enqueue_script('simpleloginscreencustomizer-upload');
 		
 		wp_enqueue_style('wp-color-picker');
@@ -241,26 +242,6 @@ function simpleloginscreencustomizer_enqueue_scripts() {
 	} // end if
 } // end simpleloginscreencustomizer_enqueue_scripts
 add_action('admin_enqueue_scripts', 'simpleloginscreencustomizer_enqueue_scripts');
-
-// Replace thickbox text so it says "I want this to be my logo!"
-function simpleloginscreencustomizer_replace_thickbox_text() {
-	function replace_thickbox_text($translated_text, $text, $domain) {
-		if ('Insert into Post' == $text) {
-			$referer = strpos( wp_get_referer(), 'simpleloginscreencustomizer_plugin_options' );
-			if ( $referer != '' ) {
-				return __('I want this to be my logo!', 'simpleloginscreencustomizer_plugin_options' );
-			} // end if
-		} // end if
-		return $translated_text;
-	} // replace_thickbox_text
-	
-	global $pagenow;
-	if ( 'media-upload.php' == $pagenow || 'async-upload.php' == $pagenow ) {
-		// Now we'll replace the 'Insert into Post Button' inside Thickbox
-		add_filter( 'gettext', 'replace_thickbox_text' , 1,3 );
-	} // end if
-} // end simpleloginscreencustomizer_options_setup
-add_action( 'admin_init', 'simpleloginscreencustomizer_replace_thickbox_text' );
 
 // Unset Thickbox Size Fields to prevent any size but Full
 function simpleloginscreencustomizer_unset_thickbox_fields($form_fields, $post){
