@@ -10,7 +10,7 @@
  * Plugin Name:       Simple Login Screen Customizer
  * Plugin URI:        https://github.com/allilevine/Simple-Login-Screen-Customizer
  * Description:       Choose a link color and logo for the login screen.  You can also choose rollover and button colors if you'd like. 
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Allison Levine
  * Author URI:        https://github.com/allilevine
  * Text Domain:       plugin-name-locale
