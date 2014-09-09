@@ -14,8 +14,8 @@ function simpleloginscreencustomizer_get_default_options() {
 	$defaultoptions = array(
 		'logo' => site_url( '/wp-admin/images/wordpress-logo.svg' ),
 		'link_color' => '#999999',
-		'rollover_color' => '#2ea2cc',
-		'button_color' => '#2ea2cc'
+		'rollover_color' => '',
+		'button_color' => ''
 );
 	return $defaultoptions;
 } // end simpleloginscreencustomizer_get_default_options
