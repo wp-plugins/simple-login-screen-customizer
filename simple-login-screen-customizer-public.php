@@ -6,7 +6,7 @@
  * @author    Allison Levine (firewatch)
  * @license   GPL-2.0+
  * @link      https://github.com/allilevine/Simple-Login-Screen-Customizer
- * @copyright 2013 Allison Levine
+ * @copyright 2015 Allison Levine
  */
 
 // Style the login page

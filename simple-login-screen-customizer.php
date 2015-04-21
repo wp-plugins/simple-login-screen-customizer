@@ -4,7 +4,7 @@
  * @author    Allison Levine (firewatch)
  * @license   GPL-2.0+
  * @link      https://github.com/allilevine/Simple-Login-Screen-Customizer
- * @copyright 2014 Allison Levine
+ * @copyright 2015 Allison Levine
  *
  * @wordpress-plugin
  * Plugin Name:       Simple Login Screen Customizer

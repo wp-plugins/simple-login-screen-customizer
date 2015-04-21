@@ -2,8 +2,8 @@
 Contributors: firewatch
 Tags: login, login screen, logo, customize, custom logo, custom colors
 Requires at least: 3.7.1
-Tested up to: 4.1.1
-Stable tag: 1.0.2
+Tested up to: 4.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
